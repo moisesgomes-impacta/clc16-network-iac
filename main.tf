@@ -4,7 +4,7 @@ resource "aws_vpc" "clc_vpc" {
   instance_tenancy = "default"
 
   tags = {
-    Name = "vpc_terraform_tf"
+    Name = "vpc_terraform_tf_ci_cd"
   }
 }
 
