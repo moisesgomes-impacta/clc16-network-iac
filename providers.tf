@@ -17,4 +17,5 @@ provider "aws" {
       Project     = "clc16-network-iac"
       Turma       = "clc16"
     }
+  }
 }
