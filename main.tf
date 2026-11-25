@@ -4,7 +4,7 @@ resource "aws_vpc" "clc_vpc" {
   instance_tenancy = "default"
 
   tags = {
-    Name = "terraform-vpc-automation"
+    Name = "${var.vpc_name}_${var.env}"
   }
 }
 
@@ -14,7 +14,7 @@ resource "aws_subnet" "public_subnet_1a" {
   cidr_block        = "172.16.1.0/24"
   availability_zone = "us-east-1a"
   tags = {
-    Name = "public_subnet_1a_tf"
+    Name = "${var.pub_subnet_1a_name}_${var.env}"
   }
 }
 
@@ -24,7 +24,7 @@ resource "aws_subnet" "private_subnet_1a" {
   cidr_block        = "172.16.10.0/24"
   availability_zone = "us-east-1a"
   tags = {
-    Name = "private_subnet_1a_tf"
+    Name = "${var.priv_subnet_1a_name}_${var.env}"
   }
 }
 
@@ -105,7 +105,7 @@ resource "aws_subnet" "public_subnet_1c" {
   cidr_block        = "172.16.2.0/24"
   availability_zone = "us-east-1c"
   tags = {
-    Name = "public_subnet_1c_tf"
+    Name = "${var.pub_subnet_1c_name}_${var.env}"
   }
 }
 
@@ -115,7 +115,7 @@ resource "aws_subnet" "private_subnet_1c" {
   cidr_block        = "172.16.20.0/24"
   availability_zone = "us-east-1c"
   tags = {
-    Name = "private_subnet_1c_tf"
+    Name = "${var.priv_subnet_1c_name}_${var.env}"
   }
 }
 
